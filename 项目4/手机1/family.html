@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/conmon.css">
+    <style>
+        .row{  margin: 0 -0.2rem;  overflow: hidden;  }
+        .col{  box-sizing: border-box;  padding: 0.2rem;  float: left;  }
+        .col-12{  width: 100%;  }
+        .col-6{  width: 50%;  }
+        .item{
+            width: 100%;
+            height: 5.1rem;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 0.2rem;
+            text-align: center;
+            padding-top: 0.25rem;
+        }
+        .item > img{
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        .text{
+            width: 3rem;
+            vertical-align: top;
+            display: inline-block;
+        }
+        .text p{
+            margin: 0.1rem;
+        }
+        .text img{
+            width: 0.9rem;
+            height: 0.9%;
+        }
+        .col-12 .item{
+            height: 4.3rem;
+        }
+        .col-12 .item > img{
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        .col-12 .text p{
+            margin: 0.8rem 0 0.4rem;
+        }
+    </style>
+</head>
+<body>
+<a class="top" href="passwd.html">修改密码</a>
+<div class="container">
+    <div class="row">
+        <div class="col col-6">
+            <div class="item">
+                <img src="img/VIPimage01.png" alt="">
+                <div class="text">
+                    <p>健康体验预约</p>
+                    <a href=""><img src="img/appointment_icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="item">
+                <img src="img/VIPimage02.png" alt="">
+                <div class="text">
+                    <p>专家诊治预约</p>
+                    <a href=""><img src="img/appointment_icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-12">
+            <div class="item">
+                <img src="img/VIPimage03.png" alt="">
+                <div class="text">
+                    <p>华西绿通预约</p>
+                    <a href=""><img src="img/appointment_ icon_on.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="item">
+                <img src="img/VIPimage04.png" alt="">
+                <div class="text">
+                    <p>医院关怀预约</p>
+                    <a href=""><img src="img/appointment_icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="item">
+                <img src="img/VIPimage05.png" alt="">
+                <div class="text">
+                    <p>消费明细查询</p>
+                    <a href=""><img src="img/search_icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.2.1.4.js"></script>
+<script src="js/font-size.js"></script>
+</body>
+</html>

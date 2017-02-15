@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        a, button {
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        a,button {
+            outline: none !important;
+        }
+
+        .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+            background-color: transparent;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: #f9f9f9;
+        }
+
+        .mynavbar {
+            background-color: rgba(0, 0, 0, 0.96);
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #fff;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+            /*color: #000;*/
+            background-color: #222222;
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #fff;
+        }
+    </style>
+</head>
+<body style="height: 3000px;">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">宠物用品店</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <form action="#" class="navbar-form navbar-right visible-sm-md">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default glyphicon glyphicon-search" style="top: 0;"></button>
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+                <li><a href="javascript:;" data-toggle="modal" data-target="#modal-login">[登录]</a></li>
+                <li><a href="javascript:;" data-toggle="modal" data-target="#modal-register">[注册]</a></li>
+                <li><a href="javascript:;"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>
+                <li><a href="javascript:;"><span class="glyphicon glyphicon-user"></span> 个人中心</a></li>
+                <li><a href="javascript:;"><span class="glyphicon glyphicon-heart"></span> 收藏本站</a></li>
+                <li><a href="javascript:;">？帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container"><img src="" alt=""></div>
+
+
+<div class="modal fade" id="modal-login">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="" class="close" data-dismiss="modal">&times;</a>
+                <h4>用户登录</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-info">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-register">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="" class="close" data-dismiss="modal">&times;</a>
+                <h4>注册</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>确定密码</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-info">立即注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

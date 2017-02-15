@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #eee;
+        }
+        .swiper-container{
+            width: 100%;
+            margin-top: 100px;
+            background: #fff;
+            text-align: center;
+            font-size: 100px;
+        }
+        .swiper-slide{
+            line-height: 300%;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div style="background-color: #a4ff64;" class="swiper-slide">1</div>
+        <div style="background-color: #ff6b64;" class="swiper-slide">2</div>
+        <div style="background-color: #b068ff;" class="swiper-slide">3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+//        autoplay:5000,
+        pagination:'.swiper-pagination',
+        paginationClickable:true,
+        prevButton:".swiper-button-prev",
+        nextButton:".swiper-button-next",
+        loop:true,
+    });
+</script>
+</body>
+</html>

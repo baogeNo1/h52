@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式导航</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        a, button {
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        button{
+            outline: none !important;
+        }
+        .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+             background-color: transparent;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: #f9f9f9;
+        }
+        .mynavbar{
+            background-color: rgba(0,0,0,0.96);
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+            border-bottom: 2px solid transparent;
+        }
+        .navbar-default .navbar-nav>li:hover > a, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+            color: #000;
+            background-color: #e62b4c;
+            border-bottom: 2px solid #e62b4c;
+        }
+        .navbar-default .navbar-nav > li > a:focus{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top mynavbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" style="margin-top: -7px;"><img src="img/logo.png" alt=""></a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home" class="page-scroll"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                    <li><a href="#about" class="page-scroll"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+                    <li><a href="#m2" class="page-scroll"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+                    <li><a href="#m3" class="page-scroll"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section style="height: 1000px;background-color: #2dbde5" id="home"></section>
+    <section style="height: 1000px;background-color: #df3d4b" id="about"></section>
+    <section style="height: 1000px;background-color: #cc60e3" id="m2"></section>
+    <section style="height: 1000px;background-color: #7bda44" id="m3"></section>
+    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(".navbar").offset().top > 50) {
+                $(".navbar-fixed-top").addClass("top-nav-collapse");
+            } else {
+                $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            }
+        });
+        $(function() {
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/conmon.css">
+    <style>
+        .input-group{
+            margin-bottom: 1.5rem;
+        }
+        .input-group label{
+            margin-left: 1.9rem;
+            vertical-align: top;
+        }
+        .input-group input{
+            margin-top: -0.4rem;
+            margin-left: 1rem;
+            border: 0;
+            background-color: transparent;
+            font-size: 0.4rem;
+            width: 4.7rem;
+            height: 0.65rem;
+            padding-left: 0.3rem;;
+        }
+        button{
+            width: 2.5rem;
+            height: 1rem;
+            background-color: #f36da0;
+            border-radius: 0.4rem;
+            border: 0;
+            color: #fff;
+            font-size: 0.4rem;
+        }
+        .cricle{
+            position: relative;
+            width: 3rem;
+            left: 2.98rem;
+            top: -0.5rem;
+        }
+        .cricle img{
+            position: absolute;
+            width: 0.27rem;
+        }
+        img.img-now{
+            animation: quan 2s infinite ;
+        }
+        @keyframes quan {
+            0%{
+                transform: scale(1.0);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(3.0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<a class="top" href="#">找回密码</a>
+    <header class="m-hd"></header>
+    <section class="m-bd">
+        <div class="input-group">
+            <label>账号</label><input type="text" placeholder="请在此输入账号">
+            <div class="cricle">
+                <img  src="img/now_cycle.png" alt="">
+                <img src="img/cycle.png" alt="">
+            </div>
+
+        </div>
+        <div class="input-group">
+            <label>密码</label><input type="text" placeholder="请在此输入密码">
+            <div class="cricle">
+                <img  src="img/now_cycle.png" alt="">
+                <img src="img/cycle.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer class="m-ft">
+        <button type="submit">登陆</button>
+    </footer>
+<script src="js/jquery.min.2.1.4.js"></script>
+<script src="js/font-size.js"></script>
+    <script>
+        (function(){
+            $('.input-group').delegate('input','focus',function(){
+                $(this).parent().find('img').first().addClass("img-now");
+            });
+            $('.input-group').delegate('input','blur',function(){
+                $(this).parent().find('img').first().removeClass("img-now");
+            });
+        })();
+    </script>
+</body>
+</html>

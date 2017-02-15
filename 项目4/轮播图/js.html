@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 258px;
+            height: 258px;
+            margin: 100px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .long{
+            position: absolute;
+            top: 0;
+            width: 2000px;
+            left: -258px;
+        }
+        .long img{
+            float: left;
+        }
+        #prev,#next{
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            font-size: 30px;
+            line-height: 30px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            text-decoration: none;
+        }
+        #next{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="long" id="long">
+            <img src="team4.png" alt="">
+            <img src="team1.png" alt="">
+            <img src="team2.png" alt="">
+            <img src="team3.png" alt="">
+            <img src="team4.png" alt="">
+            <img src="team1.png" alt="">
+        </div>
+        <a id="prev" href="javascript:;"><</a>
+        <a id="next" href="javascript:;">></a>
+    </div>
+    <script src="0.move.js"></script>
+    <script>
+        var long = document.getElementById('long');
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var page = 1;
+        next.onclick = function(){
+            page++;
+            if(page == 5){
+                long.style.left = 0;
+                page = 1;
+            }
+            move(long,{left:-258*page});
+        };
+        prev.onclick = function(){
+            page--;
+            if(page == 0){
+                long.style.left = -5*258+"px";
+                page = 4;
+            }
+            move(long,{left:-258*page});
+        }
+    </script>
+</body>
+</html>

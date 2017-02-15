@@ -1,0 +1,7 @@
+$(function(){
+    $('#scrollUp').scrollUp({
+        topSpeed:1000,
+        animation:slide,
+
+    });
+});

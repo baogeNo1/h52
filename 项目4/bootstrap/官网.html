@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官网</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <style>
+        .back-to-top {
+            transition: all 1s ease;
+            -webkit-transition: all .3s ease;
+            position: fixed;
+            bottom: 31px;
+            right: 15px;
+            z-index: 9999;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 39px;
+            background: #e62b4c;
+            color: #fff !important;
+            font-size: 17px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 40px;
+        }
+        .back-to-top {
+
+            bottom: 15px;
+            right: 15px;
+
+            width: 40px;
+            height: 40px;
+
+
+
+
+            font-size: 13px;
+
+            border-radius:50%;
+        }
+        header {
+            border-bottom: 1px solid #000;
+        }
+        .jumbotron{
+            margin-bottom: 0;
+        }
+        .banner {
+            padding: 90px 0 110px;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+            background: #020031;
+            background: -moz-linear-gradient(45deg, #020031 0, #6d3353 100%);
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #020031), color-stop(100%, #6d3353));
+            background: -webkit-linear-gradient(45deg, #020031 0, #6d3353 100%);
+            background: -o-linear-gradient(45deg, #020031 0, #6d3353 100%);
+            background: -ms-linear-gradient(45deg, #020031 0, #6d3353 100%);
+            background: linear-gradient(45deg, #020031 0, #6d3353 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#020031', endColorstr='#6d3353', GradientType=1);
+            -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+            -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+            box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+        }
+        .banner-link-1 {
+            margin-top: 40px;
+        }
+        .banner-link-2 a {
+            color: #bdbdbd;
+            font-size: 15px;
+            transition: all .2s ease;
+        }
+        .banner-link-2 a:hover {
+            color: #fff;
+        }
+        .banner h1 {
+            font-size: 60px;
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 700;
+        }
+        .social{
+            padding: 15px 0;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .social-list {
+            margin-left: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .social-list li{
+            display: inline-block;
+        }
+        .social-list>li+li:before {
+            padding: 0 10px;
+            color: #ccc;
+            content: "|";
+        }
+        .social-list li a {
+            color: #555;
+        }
+        .social-list li.social-qq:hover {
+            color: #428bca;
+        }
+        .social-list li.social-weibo a:hover {
+            color: #d9534f;
+        }
+        .social-list li .fa {
+            font-size: 18px;
+        }
+        .projects-header {
+            width: 60%;
+            text-align: center;
+            margin: 60px 0 10px;
+            font-weight: 200;
+            margin-bottom: 40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .projects-header h2 {
+            font-size: 30px;
+            letter-spacing: -1px;
+        }
+        footer {
+            color: #777;
+            padding: 0 0 30px;
+        }
+        footer a,footer a:hover{
+            color: #777;
+        }
+        .about h4{
+            color: #563d7c;
+            font-size: 16px;
+        }
+        .about p{
+            margin: 0 0 3px;
+        }
+        .projects .thumbnail .caption a:hover, .projects .thumbnail .caption a:focus{
+            text-decoration: none;
+        }
+        #scrollUp {
+            background-color: #777;
+            color: #eee;
+            font-size: 40px;
+            line-height: 1;
+            text-align: center;
+            text-decoration: none;
+            bottom: 20px;
+            right: 20px;
+            overflow: hidden;
+            width: 46px;
+            height: 46px;
+            border: none;
+            opacity: .8;
+            position: fixed;
+            z-index: 2147483647;
+            display: block;
+        }
+        @media screen and (min-width: 768px) {
+            .banner h1 {
+                font-size: 90px;
+            }
+            .projects-header h2 {
+                font-size: 42px;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            .banner h1 {
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="nav navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Bootstrap中文网</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="header-collapse">
+            <ul class="nav navbar-nav">
+                <li class="hidden-md hidden-sm"><a href="#">Bootstrap2中文文档</a></li>
+                <li class="hidden-sm"><a href="#">Bootstrap3中文文档</a></li>
+                <li><a href="#">Bootstrap 4.0预览</a></li>
+                <li><a href="#">less 教程</a></li>
+                <li><a href="#">jQuery API</a></li>
+                <li><a href="#">网站实例</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-sm"><a href="#">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--banner-->
+<section class="banner jumbotron">
+    <h1>Bootstrap</h1>
+    <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+    <p class="banner-link-1"><a href="" class="btn btn-primary btn-lg">Bootstrap3中文文档(v3.3.7)</a></p>
+    <p class="banner-link-2"><a href="">Bootstrap2中文文档(v2.3.2)</a></p>
+</section>
+
+<section class="social">
+    <div class="container">
+        <ul class="social-list">
+            <li class="social-qq">
+                <i class="fa fa-qq"></i>
+                Bootstrap技术交流群：318630708
+            </li>
+            <li class="social-forum">
+                <a href="">
+                    <i class="fa fa-comments"></i>
+                    Bootstrap问答社区
+                </a>
+            </li>
+            <li class="social-weibo">
+                <a href="">
+                    <i class="fa fa-weibo"></i>
+                    新浪微博：@Bootstrap中文网
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="container projects">
+    <div class="projects-header page-header">
+        <h2>Bootstrap相关优质项目推荐</h2>
+        <p>这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail text-center">
+                <a href=""><img src="img/codeguide.png" alt=""></a>
+                <div class="caption">
+                    <h3>
+                        <a href="">
+                            Bootstrap 编码规范
+                            <br>
+                            <small>by @mdo</small>
+                        </a>
+                    </h3>
+                    <p>
+                        Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr style="margin-top: 70px;">
+
+<footer class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h4><img src="img/footer-logo.png" alt=""></h4>
+            <p>本网站所列开源项目的中文版文档全部由<a href="">Bootstrap中文网</a>成员翻译整理，并全部遵循 <a href="">CC BY</a> 3.0协议发布</p>
+        </div>
+        <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+                <div class="col-xs-3">
+                    <h4>关于</h4>
+                    <p><a href="">关于我们</a></p>
+                    <p><a href="">广告合作</a></p>
+                    <p><a href="">友情链接</a></p>
+                    <p><a href="">招聘</a></p>
+                </div>
+                <div class="col-xs-3">
+                    <h4>旗下网站</h4>
+                    <p><a href="">新浪微博</a></p>
+                    <p><a href="">电子邮件</a></p>
+                </div>
+                <div class="col-xs-3">
+                    <h4>赞助商</h4>
+                    <p><a href="">新浪微博</a></p>
+                    <p><a href="">电子邮件</a></p>
+                </div>
+                <div class="col-xs-3">
+                    <h4>联系方式</h4>
+                    <p><a href="">新浪微博</a></p>
+                    <p><a href="">电子邮件</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="text-center"><a href="">京ICP备11008151</a> &nbsp;|&nbsp; 京公网安备11010802014853</p>
+</footer>
+
+<a class="scrollTop" href="javascript:;" id="scrollUp"><i class="fa fa-angle-up"></i></a>
+<!--<a href="javascript:;" class="scrollTop back-to-top" id="back-to-top">-->
+    <!--<i class="fa fa-arrow-up"></i>-->
+<!--</a>-->
+
+<!--<script>-->
+    <!--$(window).scroll(function () {-->
+        <!--if ($(this).scrollTop() > 100) {-->
+            <!--$("#scrollUp").fadeIn();-->
+        <!--} else {-->
+            <!--$("#scrollUp").fadeOut();-->
+        <!--}-->
+    <!--});-->
+    <!--$("#scrollUp").on('click', function () {-->
+        <!--$('html, body').animate({scrollTop: 0}, 1000);-->
+        <!--return false;-->
+    <!--});-->
+<!--</script>-->
+</body>
+</html>

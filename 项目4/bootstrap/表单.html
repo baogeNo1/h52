@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        button{
+            outline: none !important;
+        }
+    </style>
+</head>
+<body style="height: 3000px;">
+    <div class="container">
+        <!-- class="form-inline"-->
+        <form action="#">
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>press</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox">记住密码</label>
+            </div>
+            <button type="submit" class="btn btn-primary">登录</button>
+        </form>
+        <hr>
+        <form action="#">
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-pencil" style="top: 0;"></span>
+                <input type="text" class="form-control">
+                <span class="input-group-addon">@qq.com</span>
+            </div>
+            <hr>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-danger">OK</button>
+                    <button class="btn btn-primary">OK</button>
+                    <button class="btn btn-warning">OK</button>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-btn">
+                    <button class="btn btn-info">OK</button>
+                </div>
+            </div>
+            <hr>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" data-toggle="dropdown">国家 <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">中国</a></li>
+                        <li><a href="">韩国</a></li>
+                        <li><a href="">美国</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

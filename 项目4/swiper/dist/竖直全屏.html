@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #eee;
+        }
+        .swiper-container{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            text-align: center;
+            font-size: 100px;
+        }
+        .swiper-slide{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div style="background-color: #4cbdb6;" class="swiper-slide">1</div>
+        <div style="background-color: #f2655e;" class="swiper-slide">2</div>
+        <div style="background-color: #7b49b2;" class="swiper-slide">3</div>
+        <div style="background-color: #4cbdb6;" class="swiper-slide">4</div>
+        <div style="background-color: #f2655e;" class="swiper-slide">5</div>
+        <div style="background-color: #7b49b2;" class="swiper-slide">6</div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination:'.swiper-pagination',
+        paginationClickable:true,
+//        loop:true,
+        direction:"vertical",
+        mousewheelControl:true,
+        keyboardControl:true,
+    });
+</script>
+</body>
+</html>
